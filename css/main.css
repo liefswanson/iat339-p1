@@ -24,6 +24,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.number {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .element {
   padding-bottom: 2rem;
   border-top-width: 0.15rem;
@@ -109,6 +113,13 @@ code {
 
 .button-nav {
   background-color: rgb(60, 192, 181);
+  min-width: 20rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.nav-list {
+  list-style: none;
 }
 
 .button-nav:hover, .button-nav:focus {
@@ -118,7 +129,7 @@ code {
 
 .button-submit {
   background-color: rgb(231, 175, 19);
-
+  font-size: 1.2rem;
 }
 .button-submit:hover, .button-submit:focus {
   background-color: rgb(245, 217, 139);
@@ -132,7 +143,34 @@ code {
 */
 
 
+.input-label {
 
+}
+
+.input-text {
+  display: block;
+  border-color: rgb(131, 218, 210);
+  border-style: solid;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.input-text {
+  display: block;
+  border-color: rgb(60, 192, 181);
+  border-style: solid;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  transition-property: border-color;
+  transition-duration: 0.25s;
+}
+
+.input-text:hover,
+.input-text:focus {
+  border-color: rgb(131, 218, 210);
+}
 
 /*
   COMBINED ELEMENTS -------------------
