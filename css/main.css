@@ -136,7 +136,10 @@ code {
 
 }
 
-
+.image-link-back {
+  max-width: 15rem;
+  height: auto;
+}
 
 /*
   TEXT ELEMENTS -------------------
