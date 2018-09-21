@@ -319,7 +319,10 @@
       <section class='element'>
         <h3>Payment Form</h3>
 
+        <h4>CSS selectors:</h4>
+        <p>.payment-form</p>
 
+        <h4>Sample code:</h4>
         <code>
             &lt;form class='payment_form'&gt; <br>
                 &nbsp;&nbsp;&lt;label for='payment_name_first' class='input-label'&gt;First Name&lt;/label&gt; <br>
@@ -363,7 +366,8 @@
             &lt;/form&gt;
         </code>
 
-        <form class='payment_form'>
+        <h4>Rendered element:</h4>
+        <form class='payment-form'>
             <label for='payment_name_first' class='input-label'>First Name</label>
             <input type='text' id='payment_name_first' name='payment_name_first' class='input-text'>
 
@@ -402,12 +406,70 @@
 
 
 
-            <button class='button-submit'>Checkout</button>
+            <button class='button-submit'>Purchase</button>
         </form>
       </section>
 
       <section class='element'>
         <h3>Checkout Cart</h3>
+
+        <h4>CSS selectors:</h4>
+        <p>.checkout</p>
+
+        <h4>Sample code:</h4>
+
+        <h4>Rendered element:</h4>
+        <table>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+
+          <tr>
+            <td>
+              <a href='img/wooden_clogs.jpg' class='image-link-anchor'>
+                <img src='img/wooden_clogs.jpg' alt='Hand Carved Wooden Clogs' class='image-link-back'>
+                <div class='image-link-fore'></div>
+             </a>
+             Hand Carved Wooden Clogs
+            </td>
+            <td>
+                <input type='text' id='checkout_quantity_1' name='checkout_quantity_1' class='input-text' value='1'>
+            </td>
+            <td>
+              $25
+            </td>
+            <td>
+              $25
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href='img/artisans_wax.jpg' class='image-link-anchor'>
+                <img src='img/artisans_wax.jpg' alt='Artisan&#39;s Wax' class='image-link-back'>
+                <div class='image-link-fore'></div>
+             </a>
+             Artisan's Wax
+            </td>
+            <td>
+                <input type='text' id='checkout_quantity_2' name='checkout_quantity_2' class='input-text' value='2'>
+            </td>
+            <td>
+              $10
+            </td>
+            <td>
+              $20
+            </td>
+          </tr>
+        </table>
+
+        <p>Total: <strong>$35</strong></p>
+
+        <button class='button-submit'>Checkout</button>
+
       </section>
 
     </section>
