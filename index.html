@@ -225,10 +225,10 @@
 
         <h4>Sample code:</h4>
         <code>
-          &lt;ol&gt;
-            &lt;li&gt;One&lt;/li&gt;
-            &lt;li&gt;Two&lt;/li&gt;
-            &lt;li&gt;Three&lt;/li&gt;
+          &lt;ol&gt; <br>
+          &nbsp;&nbsp;&lt;li&gt;One&lt;/li&gt;<br>
+          &nbsp;&nbsp;&lt;li&gt;Two&lt;/li&gt; <br>
+          &nbsp;&nbsp;&lt;li&gt;Three&lt;/li&gt; <br>
           &lt;/ol&gt;
         </code>
 
@@ -291,6 +291,17 @@
         </p>
 
         <h4>Sample code:</h4>
+        <code>
+        &lt;div class='listing-main'&gt;<br>
+        &nbsp;&nbsp;&lt;p class='listing-title'&gt;Hand Carved Wooden Clogs&lt;/p&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href='img/wooden_clogs.jpg' class='image-link-anchor'&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src='img/wooden_clogs.jpg' alt='wooden clogs!' class='image-link-back'&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='image-link-fore'&gt;&lt;/div&gt; <br>
+        &nbsp;&nbsp;&lt;/a&gt; <br>
+
+        &nbsp;&nbsp;&lt;p class='listing-price'&gt;$25 &lt;a href='img/wooden_clogs.jpg' class='text-link'&gt;product details&lt;/a&gt;&lt;/p&gt; <br>
+        &lt;/div&gt;
+        </code>
 
         <h4>Rendered element:</h4>
         <div class='listing-main'>
@@ -307,6 +318,92 @@
 
       <section class='element'>
         <h3>Payment Form</h3>
+
+
+        <code>
+            &lt;form class='payment_form'&gt; <br>
+                &nbsp;&nbsp;&lt;label for='payment_name_first' class='input-label'&gt;First Name&lt;/label&gt; <br>
+                &nbsp;&nbsp;&lt;input type='text' id='payment_name_first' name='payment_name_first' class='input-text'&gt; <br>
+
+                &nbsp;&nbsp;&lt;label for='payment_name_last' class='input-label'&gt;Last Name&lt;/label&gt; <br>
+                &nbsp;&nbsp;&lt;input type='text' id='payment_name_last' name='payment_name_last' class='input-text'&gt; <br><br><br><br>
+
+
+                &nbsp;&nbsp;&lt;label for='payment_location_country' class='input-label'&gt;Country&lt;/label&gt; <br>
+                &nbsp;&nbsp;&lt;input type='text' id='payment_location_country' name='payment_location_country' class='input-text'&gt; <br>
+
+                &nbsp;&nbsp;&lt;label for='payment_location_province' class='input-label'&gt;Province/Territory/State&lt;/label&gt; <br>
+                &nbsp;&nbsp;&lt;input type='text' id='payment_location_province' name='payment_location_province' class='input-text'&gt; <br>
+
+                &nbsp;&nbsp;&lt;label for='payment_location_city' class='input-label'&gt;City&lt;/label&gt; <br>
+                &nbsp;&nbsp;&lt;input type='text' id='payment_location_city' name='payment_location_city' class='input-text'&gt; <br>
+
+                &nbsp;&nbsp;&lt;label for='payment_location_street' class='input-label'&gt;Street&lt;/label&gt; <br>
+                &nbsp;&nbsp;&lt;input type='text' id='payment_location_street' name='payment_location_street' class='input-text'&gt; <br><br><br><br>
+
+
+
+                &nbsp;&nbsp;&lt;label for='payment_contact_phn' class='input-label'&gt;Phone Number&lt;/label&gt; <br>
+                &nbsp;&nbsp;&lt;input type='text' id='payment_contact_phn' name='payment_contact_phn' class='input-text'&gt; <br>
+
+                &nbsp;&nbsp;&lt;label for='payment_contact_email' class='input-label'&gt;Email&lt;/label&gt; <br>
+                &nbsp;&nbsp;&lt;input type='text' id='payment_contact_email' name='payment_contact_email' class='input-text'&gt; <br><br><br><br>
+
+
+                &nbsp;&nbsp;&lt;br&gt;<br>
+                &nbsp;&nbsp;&lt;label for="payment_choice" class='input-label'&gt;Payment Choice&lt;/label&gt; &lt;br&gt; <br>
+                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' value='visa'&gt; Visa &lt;br&gt; <br>
+                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' value='paypal'&gt; Paypal &lt;br&gt; <br>
+                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' value='mastercard'&gt; Mastercard &lt;br&gt; <br>
+                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' value='bitcoin'&gt; Bitcoin &lt;br&gt; <br><br><br><br>
+
+
+
+                &nbsp;&nbsp;&lt;button class='button-submit'&gt;Checkout&lt;/button&gt; <br>
+            &lt;/form&gt;
+        </code>
+
+        <form class='payment_form'>
+            <label for='payment_name_first' class='input-label'>First Name</label>
+            <input type='text' id='payment_name_first' name='payment_name_first' class='input-text'>
+
+            <label for='payment_name_last' class='input-label'>Last Name</label>
+            <input type='text' id='payment_name_last' name='payment_name_last' class='input-text'>
+
+
+
+            <label for='payment_location_country' class='input-label'>Country</label>
+            <input type='text' id='payment_location_country' name='payment_location_country' class='input-text'>
+
+            <label for='payment_location_province' class='input-label'>Province/Territory/State</label>
+            <input type='text' id='payment_location_province' name='payment_location_province' class='input-text'>
+
+            <label for='payment_location_city' class='input-label'>City</label>
+            <input type='text' id='payment_location_city' name='payment_location_city' class='input-text'>
+
+            <label for='payment_location_street' class='input-label'>Street</label>
+            <input type='text' id='payment_location_street' name='payment_location_street' class='input-text'>
+
+
+
+            <label for='payment_contact_phn' class='input-label'>Phone Number</label>
+            <input type='text' id='payment_contact_phn' name='payment_contact_phn' class='input-text'>
+
+            <label for='payment_contact_email' class='input-label'>Email</label>
+            <input type='text' id='payment_contact_email' name='payment_contact_email' class='input-text'>
+
+
+            <br>
+            <label for="payment_choice" class='input-label'>Payment Choice</label> <br>
+            <input type='radio' class='input-radio' name='payment_choice' value='visa'> Visa <br>
+            <input type='radio' class='input-radio' name='payment_choice' value='paypal'> Paypal <br>
+            <input type='radio' class='input-radio' name='payment_choice' value='mastercard'> Mastercard <br>
+            <input type='radio' class='input-radio' name='payment_choice' value='bitcoin'> Bitcoin <br>
+
+
+
+            <button class='button-submit'>Checkout</button>
+        </form>
       </section>
 
       <section class='element'>
