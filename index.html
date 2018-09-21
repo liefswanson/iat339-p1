@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset='utf-8'>
+    <title>P01 - Style Guide Template</title>
+
+    <link href='css/main.css' rel='stylesheet'>
+
+  </head>
+
+  <body>
+
+    <header>
+      <h1>P01 - Style Guide Template</h1>
+
+      <p>A template you can use to start building out your own style guides with.</p>
+
+
+      <nav>
+        <a href='#interactive_elements'>Interactive Elements</a>
+        <a href='#text_elements'>Text Elements</a>
+        <a href='#combined_elements'>Combined Elements</a>
+        <a href='product_listing.html'>Product Listing Template</a>
+        <a href='checkout.html'>Checkout Template</a>
+        <a href='#citations'>Citations</a>
+      </nav>
+
+
+
+    <!-- INTERACTIVE ELEMENTS SECTION // -->
+    <section id='interactive_elements'>
+      <h2>Interactive Elements</h2>
+
+
+      <section class='element'>
+        <h3>In-text link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.text-link</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;a href='https://en.wikipedia.org/wiki/Hyperlink' class='text-link'&gt;it's a link!&lt;/a&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <a href='https://en.wikipedia.org/wiki/Hyperlink' class='text-link'>it's a link!</a>
+
+
+      </section>
+
+
+      <!-- Default Button styling section -->
+      <section class='element' id='nav-to-self'>
+
+        <h3>Navigation Link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.button-nav</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;a id='nav-to-self' href='#nav-to-self' class='button-nav'&gt;Navigate!&lt;/a&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <a class='button-nav' href='#nav-to-self'>Navigate!</a>
+
+      </section>
+
+
+      <section class='element'>
+        <h3>Submit/Reset Buttons</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.button-submit</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;button class='button-submit'&gt;Submit&lt;/button&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <button class='button-submit'>Submit</button>
+      </section>
+
+
+      <section class='element'>
+        <h3>Text Input Field with Label</h3>
+
+        <h4>CSS selectors:</h4>
+        <p>
+          .input-label <br>
+          .input-text
+        </p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;label for='sample-input' class='input-label'&gt;Sample Input Field&lt;/label&gt;<br>
+          &lt;input type='text' id='sample-input' name='sample-input' class='input-text'&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
+        <label for='sample-input' class='input-label'>Sample Input Field</label>
+        <input type='text' id='sample-input' name='sample-input' class='input-text'>
+      </section>
+
+
+      <section class='element'>
+        <h3>Radio Button with Label</h3>
+
+        <h4>CSS selectors:</h4>
+        <p>.input-radio</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;input type='radio' class='input-radio' name='sample-radio' value='this'&gt; this &lt;br&gt; <br>
+          &lt;input type='radio' class='input-radio' name='sample-radio' value='is'&gt; is &lt;br&gt; <br>
+          &lt;input type='radio' class='input-radio' name='sample-radio' value='a'&gt; a &lt;br&gt; <br>
+          &lt;input type='radio' class='input-radio' name='sample-radio' value='radio'&gt; radio &lt;br&gt; <br>
+          &lt;input type='radio' class='input-radio' name='sample-radio' value='button'&gt; button
+        </code>
+
+        <h4>Rendered element:</h4>
+        <input type='radio' class='input-radio' name='sample-radio' value='this'> this <br>
+        <input type='radio' class='input-radio' name='sample-radio' value='is'> is <br>
+        <input type='radio' class='input-radio' name='sample-radio' value='a'> a <br>
+        <input type='radio' class='input-radio' name='sample-radio' value='radio'> radio <br>
+        <input type='radio' class='input-radio' name='sample-radio' value='button'> button
+
+      </section>
+
+
+      <section class='element'>
+        <h3>Image as a Link</h3>
+
+
+        <h4>CSS selectors:</h4>
+        <p>
+          .image-link-anchor <br>
+          .image-link-back <br>
+          .image-link-fore
+        </p>
+
+        <h4>Sample code:</h4>
+        <code>
+            &lt;a href='img/wooden_clogs.jpg' class='image-link-anchor'&gt;<br>
+            &nbsp;&nbsp; &lt;img src='img/wooden_clogs.jpg' alt='wooden clogs!' class='image-link-back'&gt;<br>
+            &nbsp;&nbsp; &lt;div class='image-link-fore'&gt;&lt;/div&gt;<br>
+            &lt;/a&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
+        <a href='img/wooden_clogs.jpg' class='image-link-anchor'>
+          <img src='img/wooden_clogs.jpg' alt='wooden clogs!' class='image-link-back'>
+          <div class='image-link-fore'></div>
+        </a>
+      </section>
+
+
+    </section>
+    <!-- // INTERACTIVE ELEMENTS SECTION -->
+
+
+
+    <!-- TEXT ELEMENTS SECTION // -->
+    <section id='text_elements'>
+      <h2>Text Elements</h2>
+
+      <section class='element'>
+        <h3>Headings</h3>
+
+        <h4>CSS selectors:</h4>
+        <p>
+          h1<br>
+          h2<br>
+          h3<br>
+          h4<br>
+          h5<br>
+          h6
+        </p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;h1&gt;H1 heading&lt;/h1&gt; <br>
+          &lt;h2&gt;H2 heading&lt;/h2&gt; <br>
+          &lt;h3&gt;H3 heading&lt;/h3&gt; <br>
+          &lt;h4&gt;H4 heading&lt;/h4&gt; <br>
+          &lt;h5&gt;H5 heading&lt;/h5&gt; <br>
+          &lt;h6&gt;H6 heading&lt;/h6&gt; <br>
+        </code>
+
+        <h4>Rendered element:</h4>
+
+        <h1>H1 heading</h1>
+        <h2>H2 heading</h2>
+        <h3>H3 heading</h3>
+        <h4>H4 heading</h4>
+        <h5>H5 heading</h5>
+        <h6>H6 heading</h6>
+
+      </section>
+
+      <section class='element'>
+        <h3>Paragraphs</h3>
+
+        <h4>CSS selectors:</h4>
+        <p>p</p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;p&gt;<br>
+          &nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum orci et eros aliquet, in bibendum libero viverra. Etiam arcu mi, dapibus vitae ultricies fermentum, vehicula eu nibh. Donec vel justo sed arcu commodo tempus. Nulla ornare velit ut eros scelerisque, dictum feugiat lacus euismod. Sed nulla lacus, hendrerit sit amet velit a, pellentesque accumsan quam. Nunc a sollicitudin metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras varius metus ut ligula pharetra, a ornare diam varius. Phasellus vel neque non sapien pulvinar pharetra vel at sapien. Praesent eget sapien a magna ornare suscipit eget vel libero. Donec gravida porttitor ex eu ultricies. Donec sodales, dui ac hendrerit lobortis, libero ante rhoncus nisi, sed mollis metus libero sed turpis. Donec sit amet mi ex. Curabitur pellentesque erat ac porta pharetra. Nunc ac odio leo. <br>
+          &lt;/p&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum orci et eros aliquet, in bibendum libero viverra. Etiam arcu mi, dapibus vitae ultricies fermentum, vehicula eu nibh. Donec vel justo sed arcu commodo tempus. Nulla ornare velit ut eros scelerisque, dictum feugiat lacus euismod. Sed nulla lacus, hendrerit sit amet velit a, pellentesque accumsan quam. Nunc a sollicitudin metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras varius metus ut ligula pharetra, a ornare diam varius. Phasellus vel neque non sapien pulvinar pharetra vel at sapien. Praesent eget sapien a magna ornare suscipit eget vel libero. Donec gravida porttitor ex eu ultricies. Donec sodales, dui ac hendrerit lobortis, libero ante rhoncus nisi, sed mollis metus libero sed turpis. Donec sit amet mi ex. Curabitur pellentesque erat ac porta pharetra. Nunc ac odio leo.
+        </p>
+      </section>
+
+      <section class='element'>
+        <h3>Numbered Lists</h3>
+
+        <h4>CSS selectors:</h4>
+        <p>
+          ol<br>
+        </p>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;ol&gt;
+            &lt;li&gt;One&lt;/li&gt;
+            &lt;li&gt;Two&lt;/li&gt;
+            &lt;li&gt;Three&lt;/li&gt;
+          &lt;/ol&gt;
+        </code>
+
+        <h4>Rendered element:</h4>
+        <ol>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+        </ol>
+      </section>
+
+    </section>
+    <!-- // TEXT ELEMENTS SECTION -->
+
+
+
+    <!-- COMBINED ELEMENTS SECTION // -->
+    <section id='combined_elements'>
+      <h2>Combined Elements</h2>
+
+      <section class='element'>
+        <h3>Main Navigation</h3>
+      </section>
+
+      <section class='element'>
+        <h3>Product/Service Listing</h3>
+      </section>
+
+      <section class='element'>
+        <h3>Payment Form</h3>
+      </section>
+
+      <section class='element'>
+        <h3>Checkout Cart</h3>
+      </section>
+
+    </section>
+    <!-- // COMBINED ELEMENTS SECTION -->
+
+
+
+    <section id='citations'>
+      <h2>Citations</h2>
+
+      <ul>
+        <li>shenandoahwalker, Seller, 2018. <strong>Wooden Clogs [Image]</strong>. Retreived from <a href="https://www.ebay.com/itm/VTG-Pair-Hand-Carved-Wooden-Dutch-Clogs-Klompen-Shoes-16-5cm-Solid-Wood-Handmade-/231910665523">https://www.ebay.com/itm/VTG-Pair-Hand-Carved-Wooden-Dutch-Clogs-Klompen-Shoes-16-5cm-Solid-Wood-Handmade-/231910665523</a></li>
+        <li>Matteson, Steve. Designer. 2011. <strong>Open Sans [Font]</strong>. Retrieved from <a href='https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Open+Sans'>https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Open+Sans</a></li>
+        <li>Creator. (Role). (Year). <strong>Title [Media]</strong>. Retrieved from <a href='#'>URL</a>.</li>
+      </ul>
+
+    </section>
+
+
+
+  </body>
+</html>
