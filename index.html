@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
-<html>
+<html lang='en' class='light'>
 
   <head>
 
     <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Luddite Shoe Co. Style Guide</title>
 
     <link href='css/main.css' rel='stylesheet'>
@@ -21,10 +23,12 @@
         <a href='#interactive_elements'>Interactive Elements</a>
         <a href='#text_elements'>Text Elements</a>
         <a href='#combined_elements'>Combined Elements</a>
-        <a href='product_listing.html'>Product Listing Template</a>
-        <a href='checkout.html'>Checkout Template</a>
+        <!-- <a href='product_listing.html'>Product Listing Template</a>
+        <a href='checkout.html'>Checkout Template</a> -->
         <a href='#citations'>Citations</a>
       </nav>
+
+    </header>
 
     <section id='branding'>
         <h2>Branding</h2>
@@ -63,9 +67,28 @@
 
         <h3>Colours</h3>
         <p>Colours consist mostly of pastels so as not to overwhelm any wood/leather textures.</p>
-        <a href='https://color.adobe.com/create/color-wheel/?base=2&rule=Analogous&selected=2&name=My%20Color%20Theme&mode=rgb&rgbvalues=1,0.6827270093098825,0.4789477662085718,0.91,0.7956452478522236,0.45974179953777805,0.9251545831143639,1,0.48008701174133017,0.4838602366800489,0.91,0.5415255721430989,0.5334158893250566,1,0.9837467581671567&swatchOrder=0,1,2,3,4'>
+        <a href='https://color.adobe.com/create/color-wheel/?base=2&rule=Custom&selected=2&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.5137254901960784,0.8549019607843137,0.8235294117647058,0.3108091022536463,0.30804130755837594,0.36,1,0.3764705882352941,0.33725490196078434,0.96,0.96,0.96,0.9058823529411765,0.6862745098039216,0.07450980392156863&swatchOrder=0,1,2,3,4'>
           Adobe Color CC Palette.
         </a>
+        <div class='color-box'>
+          <div class='color-swatch primary'>
+
+          </div>
+          <div class='color-swatch secondary'>
+
+          </div>
+          <div class='color-swatch warning'>
+
+          </div>
+
+          <div class='color-swatch light'>
+
+          </div>
+
+          <div class='color-swatch dark'>
+
+          </div>
+        </div>
 
         <h3>Art Direction</h3>
         <p>
@@ -157,20 +180,24 @@
 
         <h4>Sample code:</h4>
         <code>
-          &lt;input type='radio' class='input-radio' name='sample-radio' value='this'&gt; this &lt;br&gt; <br>
-          &lt;input type='radio' class='input-radio' name='sample-radio' value='is'&gt; is &lt;br&gt; <br>
-          &lt;input type='radio' class='input-radio' name='sample-radio' value='a'&gt; a &lt;br&gt; <br>
-          &lt;input type='radio' class='input-radio' name='sample-radio' value='radio'&gt; radio &lt;br&gt; <br>
-          &lt;input type='radio' class='input-radio' name='sample-radio' value='button'&gt; button
+          &lt;input type='radio' class='input-radio' name='sample-radio' id='sample-radio-this' value='this'&gt; &lt;label for="sample-radio-this"&gt;this&lt;/label&gt; &lt;br&gt; <br>
+          &lt;input type='radio' class='input-radio' name='sample-radio' id='sample-radio-is' value='is'&gt; &lt;label for="sample-radio-is"&gt;is&lt;/label&gt; &lt;br&gt; <br>
+          &lt;input type='radio' class='input-radio' name='sample-radio' id='sample-radio-a' value='a'&gt; &lt;label for="sample-radio-a"&gt;a&lt;/label&gt; &lt;br&gt; <br>
+          &lt;input type='radio' class='input-radio' name='sample-radio' id='sample-radio-radio' value='radio'&gt; &lt;label for="sample-radio-radio"&gt;radio&lt;/label&gt; &lt;br&gt; <br>
+          &lt;input type='radio' class='input-radio' name='sample-radio' id='sample-radio-button' value='button'&gt; &lt;label for="sample-radio-button"&gt;button&lt;/label&gt;
         </code>
 
         <h4>Rendered element:</h4>
-        <input type='radio' class='input-radio' name='sample-radio' value='this'> this <br>
-        <input type='radio' class='input-radio' name='sample-radio' value='is'> is <br>
-        <input type='radio' class='input-radio' name='sample-radio' value='a'> a <br>
-        <input type='radio' class='input-radio' name='sample-radio' value='radio'> radio <br>
-        <input type='radio' class='input-radio' name='sample-radio' value='button'> button
-
+        <form>
+        <fieldset>
+          <legend>a set of radio buttons</legend>
+          <input type='radio' class='input-radio' name='sample-radio' id='sample-radio-this' value='this'> <label for="sample-radio-this" class='input-radio-label'>this</label> <br>
+          <input type='radio' class='input-radio' name='sample-radio' id='sample-radio-is' value='is'> <label for="sample-radio-is" class='input-radio-label'>is</label> <br>
+          <input type='radio' class='input-radio' name='sample-radio' id='sample-radio-a' value='a'> <label for="sample-radio-a" class='input-radio-label'>a</label> <br>
+          <input type='radio' class='input-radio' name='sample-radio' id='sample-radio-radio' value='radio'> <label for="sample-radio-radio" class='input-radio-label'>radio</label> <br>
+          <input type='radio' class='input-radio' name='sample-radio' id='sample-radio-button' value='button'> <label for="sample-radio-button" class='input-radio-label'>button</label>
+        </fieldset>
+        </form>
       </section>
 
 
@@ -408,10 +435,10 @@
 
                 &nbsp;&nbsp;&lt;br&gt;<br>
                 &nbsp;&nbsp;&lt;label for="payment_choice" class='input-label'&gt;Payment Choice&lt;/label&gt; &lt;br&gt; <br>
-                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' value='visa'&gt; Visa &lt;br&gt; <br>
-                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' value='paypal'&gt; Paypal &lt;br&gt; <br>
-                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' value='mastercard'&gt; Mastercard &lt;br&gt; <br>
-                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' value='bitcoin'&gt; Bitcoin &lt;br&gt; <br><br><br><br>
+                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_visa' value='visa'&gt; &lt;label for="payment_choice_visa"&gt;Visa&lt;/label&gt; &lt;br&gt; <br>
+                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_paypal' value='paypal'&gt; &lt;label for="payment_choice_paypal"&gt;PayPal&lt;/label&gt; &lt;br&gt; <br>
+                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_mastercard' value='mastercard'&gt; &lt;label for="payment_choice_mastercard"&gt;MasterCard&lt;/label&gt; &lt;br&gt; <br>
+                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_bitcoin' value='bitcoin'&gt; &lt;label for="payment_choice_bitcoin"&gt;Bitcoin&lt;/label&gt; &lt;br&gt; <br>
 
 
 
@@ -451,12 +478,13 @@
 
 
             <br>
-            <label for="payment_choice" class='input-label'>Payment Choice</label> <br>
-            <input type='radio' class='input-radio' name='payment_choice' value='visa'> Visa <br>
-            <input type='radio' class='input-radio' name='payment_choice' value='paypal'> Paypal <br>
-            <input type='radio' class='input-radio' name='payment_choice' value='mastercard'> Mastercard <br>
-            <input type='radio' class='input-radio' name='payment_choice' value='bitcoin'> Bitcoin <br>
-
+            <fieldset name='payment_choice_set'>
+              <legend>Payment Options</legend>
+              <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_visa' value='visa'> <label for="payment_choice_visa">Visa</label> <br>
+              <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_paypal' value='paypal'> <label for="payment_choice_paypal">PayPal</label> <br>
+              <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_mastercard' value='mastercard'> <label for="payment_choice_mastercard">MasterCard</label> <br>
+              <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_bitcoin' value='bitcoin'> <label for="payment_choice_bitcoin">Bitcoin</label> <br>
+            </fieldset>
 
 
             <button class='button-submit'>Purchase</button>
@@ -472,12 +500,14 @@
         <h4>Sample code:</h4>
 
         <h4>Rendered element:</h4>
-        <table>
+        <form>
+        <table title='items in cart'>
+          <caption>a form used to confirm the items in your cart before checking out.</caption>
           <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Total</th>
+            <th scope='col'>Product</th>
+            <th scope='col'>Quantity</th>
+            <th scope='col'>Price</th>
+            <th scope='col'>Total</th>
           </tr>
 
           <tr>
@@ -489,6 +519,7 @@
              Hand Carved Wooden Clogs
             </td>
             <td>
+                <label for='checkout_quantity_1'>Hand Carved Wooden Clogs</label>
                 <input type='text' id='checkout_quantity_1' name='checkout_quantity_1' class='input-text number' value='1'>
             </td>
             <td>
@@ -508,8 +539,9 @@
              Artisan's Wax
             </td>
             <td>
+                <label for='checkout_quantity_2'>Artisan's Wax: </label>
                 <input type='text' id='checkout_quantity_2' name='checkout_quantity_2' class='input-text number' value='2'>
-            </td>
+              </td>
             <td>
                 <span class='number'>$10</span>
               </td>
@@ -518,10 +550,10 @@
             </td>
           </tr>
         </table>
-
         <p>Total: <strong class='number'>$35</strong></p>
 
         <button class='button-submit'>Checkout</button>
+      </form>
 
       </section>
 
