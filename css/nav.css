@@ -1,0 +1,63 @@
+.nav-main {
+}
+
+.body-box {
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-item {
+    flex: 1;
+    background: #3cc0b5;
+    transition-duration: 0.5s;
+    transition-property: background-color;
+}
+
+#current {
+    background: #E7AF13;
+}
+
+#current:hover,
+#current:focus {
+    background: #f5d98b;
+}
+
+.main-content {
+}
+
+.button-nav {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-weight: bolder;
+    border: none;
+    text-align: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    padding: 1rem;
+    font-size: 1.5rem;
+
+    transition-duration: 0.5s;
+    transition-property: color;
+}
+
+.button-nav:hover,
+.button-nav:focus {
+    color: black;
+}
+
+
+
+.nav-item:hover,
+.nav-item:focus {
+    background-color: #83dad2;
+}
+

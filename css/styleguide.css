@@ -1,0 +1,243 @@
+/*
+  STYLE GUIDE STYLING
+  Default styling for the style guide
+*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  padding: 2rem;
+}
+
+.site-body {
+  padding: 0;
+  margin: 0;
+}
+
+.color-box {
+  display: flex;
+}
+
+.color-swatch {
+  height: 0;
+  padding: 5rem;
+}
+
+.primary {
+/* background: rgb(131, 218, 210); */
+  background: #83DAD2;
+}
+
+.secondary {
+  /* background: rgb(231, 175, 19); */
+  background: #E7AF13
+}
+
+.warning {
+  background: #FF6056;
+}
+
+.dark {
+  background: #524F5C;
+}
+
+.light {
+  background: #F5F5F5;
+}
+
+.lobster, .playfair-display, .montserrat {
+  font-size: 1.25rem;
+}
+
+.lobster {
+  font-family: 'Lobster', cursive;
+}
+
+.playfair-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.number {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.element {
+  padding-bottom: 2rem;
+  border-top-width: 0.15rem;
+  border-top-style: solid;
+  border-top-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lobster', cursive;
+  color: #524F5C;
+}
+
+h1 {
+  margin-top: 5rem;
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin-top: 4.5rem;
+  font-size: 2.1rem;
+  font-style: italic;
+}
+
+h3 {
+  margin-top: 3rem;
+  font-size: 1.75rem;
+}
+
+h4 {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+h5 {
+  margin-top: 0.75rem;
+  font-size: 1.3rem;
+}
+
+h6 {
+  margin-top: 0.25rem;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+p {
+  margin-top: 0;
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: none;
+}
+
+code {
+  background-color: #EEE;
+  padding: 0.5rem;
+  display: block;
+}
+
+
+/*
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+/* Styling for the navigation button */
+.button-nav,
+.button-submit {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  transition-property: background-color, color;
+  border: none;
+  transition-duration: 0.5s;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.input-radio {
+  cursor: pointer;
+}
+
+.input-radio-label {
+  cursor: pointer;
+}
+
+.button-nav:hover, .button-nav:focus,
+.button-submit:hover, .button-submit:focus {
+  color: black;
+}
+
+.button-nav {
+  background-color: rgb(60, 192, 181);
+  min-width: 20rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.button-nav:hover, .button-nav:focus {
+  background-color: rgb(131, 218, 210);
+
+}
+
+.button-submit {
+  background-color: rgb(231, 175, 19);
+  font-size: 1.2rem;
+}
+.button-submit:hover, .button-submit:focus {
+  background-color: rgb(245, 217, 139);
+
+}
+
+.image-link-back {
+  max-width: 15rem;
+  height: auto;
+}
+
+.image-link-fore {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.image-link-anchor {
+  display: inline-block;
+  position: relative;
+}
+
+.image-link-fore:hover,
+.image-link-fore:focus {
+  background: white;
+  opacity: 0.5;
+}
+/*
+  TEXT ELEMENTS -------------------
+*/
+
+
+.input-label {
+
+}
+
+.input-text {
+  display: block;
+  border-color: #3cc0b5;
+  border-style: solid;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  background: white;
+  transition-property: border-color;
+  transition-duration: 0.25s;
+}
+
+.input-text:hover,
+.input-text:focus {
+  border-color: rgb(231, 175, 19);
+}
+
+/*
+  COMBINED ELEMENTS -------------------
+*/

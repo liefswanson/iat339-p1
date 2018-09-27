@@ -1,0 +1,32 @@
+#header {
+    display: flex;
+    color: #524F5C;
+    background-image: url(wood.jpg);
+    background-repeat: repeat;
+}
+
+.logo {
+    padding-left: 2rem;
+}
+
+.spacer {
+    flex: 1;
+}
+
+#cart {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #524F5C;
+    text-decoration: none;
+    border: none;
+    line-height: 1.5;
+
+    transition-duration: 0.5s;
+    transition-property: color;
+}
+
+#cart:hover,
+#cart:focus {
+    color: black;
+
+}

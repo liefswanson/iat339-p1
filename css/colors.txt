@@ -1,0 +1,7 @@
+primary   #83DAD2;
+darker    #3cc0b5;
+secondary #E7AF13
+warning   #FF6056;
+dark      #524F5C;
+darker    #37363a;
+light     #F5F5F5;
