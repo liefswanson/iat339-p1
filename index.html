@@ -8,7 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Luddite Shoe Co. Style Guide</title>
 
-    <link href='css/styleguide.css' rel='stylesheet'>
+    <link href='css/normalize.css' rel='stylesheet'>
+    <link href='css/main.css' rel='stylesheet'>
+    <link href='css/nav.css' rel='stylesheet'>
+    <link href='css/header.css' rel='stylesheet'>
+    <link href='css/listing.css' rel='stylesheet'>
+    <link href='css/form.css' rel='stylesheet'>
+    <link href='css/styleguidehack.css' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lobster|Montserrat|Playfair+Display' rel='stylesheet'>
 
   </head>
@@ -132,8 +138,9 @@
         <code>&lt;a id='nav-to-self' href='#nav-to-self' class='button-nav'&gt;Navigate!&lt;/a&gt;</code>
 
         <h4>Rendered element:</h4>
-        <a class='button-nav' href='#nav-to-self'>Navigate!</a>
-
+        <ul class='nav-list'>
+          <li class='nav-item-demo'><a class='button-nav' href='#header'>events</a></li>
+        </ul>
       </section>
 
 
@@ -214,16 +221,18 @@
 
         <h4>Sample code:</h4>
         <code>
-            &lt;a href='img/wooden_clogs.jpg' class='image-link-anchor'&gt;<br>
-            &nbsp;&nbsp; &lt;img src='img/wooden_clogs.jpg' alt='wooden clogs!' class='image-link-back'&gt;<br>
-            &nbsp;&nbsp; &lt;div class='image-link-fore'&gt;&lt;/div&gt;<br>
-            &lt;/a&gt;
+          &lt;a class='image-link-anchor' href='#header'&gt; <br>
+          &nbsp;&nbsp;&lt;div class='image-link-back'&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img class='image-link-image' src="img/wooden_clogs.jpg" alt="Hand Carved Wooden Clogs"&gt; <br>
+          &nbsp;&nbsp;&lt;/div&gt; <br>
+          &lt;/a&gt;
         </code>
 
         <h4>Rendered element:</h4>
-        <a href='img/wooden_clogs.jpg' class='image-link-anchor'>
-          <img src='img/wooden_clogs.jpg' alt='wooden clogs!' class='image-link-back'>
-          <div class='image-link-fore'></div>
+        <a class='image-link-anchor' href='#header'>
+          <div class='image-link-back'>
+              <img class='image-link-image' src="img/wooden_clogs.jpg" alt="Hand Carved Wooden Clogs">
+          </div>
         </a>
       </section>
 
@@ -335,13 +344,12 @@
 
         <h4>Sample code:</h4>
         <code>
-          &lt;nav class='nav-main'&gt;<br>
-          &nbsp;&nbsp;&lt;ul class='nav-list'&gt;<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a class='button-nav' href='#branding'&gt;branding&lt;/a&gt;&lt;/li&gt;<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a class='button-nav' href='#nav-to-self'&gt;interactive elements&lt;/a&gt;&lt;/li&gt;<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a class='button-nav' href='#text_elements'&gt;text elements&lt;/a&gt;&lt;/li&gt;<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a class='button-nav' href='#combined_elements'&gt;combined elements&lt;/a&gt;&lt;/li&gt; <br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a class='button-nav' href='#citations'&gt;citations&lt;/a&gt;&lt;/li&gt; <br>
+          &lt;nav class='nav-main'&gt; <br>
+          &nbsp;&nbsp;&lt;ul class='nav-list'&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class='nav-item'&gt;&lt;a class='button-nav' href='#header'&gt;events&lt;/a&gt;&lt;/li&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class='nav-item'&gt;&lt;a class='button-nav' href='#header'&gt;about&lt;/a&gt;&lt;/li&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class='nav-item'&gt;&lt;a class='button-nav' href='#header'&gt;contact&lt;/a&gt;&lt;/li&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class='nav-item'&gt;&lt;a tooltip='checkout' class='button-nav' href='product_listings.html'&gt;products&lt;/a&gt;&lt;/li&gt; <br>
           &nbsp;&nbsp;&lt;/ul&gt; <br>
           &lt;/nav&gt;
         </code>
@@ -349,13 +357,13 @@
 
         <h4>Rendered element:</h4>
         <nav class='nav-main'>
-          <ul class='nav-list'>
-              <li><a class='button-nav' href='#branding'>branding</a></li>
-            <li><a class='button-nav' href='#interactive_elements'>interactive elements</a></li>
-            <li><a class='button-nav' href='#text_elements'>text elements</a></li>
-            <li><a class='button-nav' href='#combined_elements'>combined elements</a></li>
-            <li><a class='button-nav' href='#citations'>citations</a></li>
-          </ul>
+            <ul class='nav-list'>
+                <li class='nav-item'><a class='button-nav' href='#header'>events</a></li>
+                <li class='nav-item'><a class='button-nav' href='#header'>about</a></li>
+                <li class='nav-item'><a class='button-nav' href='#header'>contact</a></li>
+                <li class='nav-item'><a tooltip='checkout' class='button-nav' href='product_listings.html'>products</a></li>
+            </ul>
+        </nav>
         </nav>
 
       </section>
@@ -365,6 +373,7 @@
 
         <h4>CSS selectors:</h4>
         <p>
+          .product <br>
           .listing-main <br>
           .listing-price <br>
           .listing-title
@@ -372,27 +381,33 @@
 
         <h4>Sample code:</h4>
         <code>
-        &lt;div class='listing-main'&gt;<br>
-        &nbsp;&nbsp;&lt;p class='listing-title'&gt;Hand Carved Wooden Clogs&lt;/p&gt; <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href='img/wooden_clogs.jpg' class='image-link-anchor'&gt; <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src='img/wooden_clogs.jpg' alt='wooden clogs!' class='image-link-back'&gt; <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='image-link-fore'&gt;&lt;/div&gt; <br>
-        &nbsp;&nbsp;&lt;/a&gt; <br>
-
-        &nbsp;&nbsp;&lt;p class='listing-price'&gt;$25 &lt;a href='img/wooden_clogs.jpg' class='text-link'&gt;product details&lt;/a&gt;&lt;/p&gt; <br>
-        &lt;/div&gt;
+          &lt;li class='product'&gt; <br>
+          &nbsp;&nbsp;&lt;div class='listing-main'&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class='image-link-anchor' href='#header'&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class='image-link-back'&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class='image-link-image' src="img/wooden_clogs.jpg" alt="Hand Carved Wooden Clogs"&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class='listing-title' href='#header'&gt;Hand Carved Wooden Clogs&lt;/a&gt; <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class='listing-price'&gt;$60&lt;/p&gt; <br>
+          &nbsp;&nbsp;&lt;/div&gt; <br>
+          &lt;/li&gt;
         </code>
 
         <h4>Rendered element:</h4>
-        <div class='listing-main'>
-          <p class='listing-title'>Hand Carved Wooden Clogs</p>
-          <a href='img/wooden_clogs.jpg' class='image-link-anchor'>
-            <img src='img/wooden_clogs.jpg' alt='wooden clogs!' class='image-link-back'>
-            <div class='image-link-fore'></div>
-          </a>
-
-        <p class='listing-price'>$25 <a href='img/wooden_clogs.jpg' class='text-link'>product details</a></p>
-        </div>
+        <ul class='products'>
+          <li class='product'>
+              <div class='listing-main'>
+                  <a class='image-link-anchor' href='#header'>
+                      <div class='image-link-back'>
+                          <img class='image-link-image' src="img/wooden_clogs.jpg" alt="Hand Carved Wooden Clogs">
+                      </div>
+                  </a>
+                  <a class='listing-title' href='#header'>Hand Carved Wooden Clogs</a>
+                  <p class='listing-price'>$60</p>
+              </div>
+          </li>
+        </ul>
 
       </section>
 
@@ -404,90 +419,91 @@
 
         <h4>Sample code:</h4>
         <code>
-            &lt;form class='payment_form'&gt; <br>
-                &nbsp;&nbsp;&lt;label for='payment_name_first' class='input-label'&gt;First Name&lt;/label&gt; <br>
-                &nbsp;&nbsp;&lt;input type='text' id='payment_name_first' name='payment_name_first' class='input-text'&gt; <br>
-
-                &nbsp;&nbsp;&lt;label for='payment_name_last' class='input-label'&gt;Last Name&lt;/label&gt; <br>
-                &nbsp;&nbsp;&lt;input type='text' id='payment_name_last' name='payment_name_last' class='input-text'&gt; <br><br><br><br>
-
-
-                &nbsp;&nbsp;&lt;label for='payment_location_country' class='input-label'&gt;Country&lt;/label&gt; <br>
-                &nbsp;&nbsp;&lt;input type='text' id='payment_location_country' name='payment_location_country' class='input-text'&gt; <br>
-
-                &nbsp;&nbsp;&lt;label for='payment_location_province' class='input-label'&gt;Province/Territory/State&lt;/label&gt; <br>
-                &nbsp;&nbsp;&lt;input type='text' id='payment_location_province' name='payment_location_province' class='input-text'&gt; <br>
-
-                &nbsp;&nbsp;&lt;label for='payment_location_city' class='input-label'&gt;City&lt;/label&gt; <br>
-                &nbsp;&nbsp;&lt;input type='text' id='payment_location_city' name='payment_location_city' class='input-text'&gt; <br>
-
-                &nbsp;&nbsp;&lt;label for='payment_location_street' class='input-label'&gt;Street&lt;/label&gt; <br>
-                &nbsp;&nbsp;&lt;input type='text' id='payment_location_street' name='payment_location_street' class='input-text'&gt; <br><br><br><br>
-
-
-
-                &nbsp;&nbsp;&lt;label for='payment_contact_phn' class='input-label'&gt;Phone Number&lt;/label&gt; <br>
-                &nbsp;&nbsp;&lt;input type='text' id='payment_contact_phn' name='payment_contact_phn' class='input-text'&gt; <br>
-
-                &nbsp;&nbsp;&lt;label for='payment_contact_email' class='input-label'&gt;Email&lt;/label&gt; <br>
-                &nbsp;&nbsp;&lt;input type='text' id='payment_contact_email' name='payment_contact_email' class='input-text'&gt; <br><br><br><br>
-
-
-                &nbsp;&nbsp;&lt;br&gt;<br>
-                &nbsp;&nbsp;&lt;label for="payment_choice" class='input-label'&gt;Payment Choice&lt;/label&gt; &lt;br&gt; <br>
-                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_visa' value='visa'&gt; &lt;label for="payment_choice_visa"&gt;Visa&lt;/label&gt; &lt;br&gt; <br>
-                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_paypal' value='paypal'&gt; &lt;label for="payment_choice_paypal"&gt;PayPal&lt;/label&gt; &lt;br&gt; <br>
-                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_mastercard' value='mastercard'&gt; &lt;label for="payment_choice_mastercard"&gt;MasterCard&lt;/label&gt; &lt;br&gt; <br>
-                &nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_bitcoin' value='bitcoin'&gt; &lt;label for="payment_choice_bitcoin"&gt;Bitcoin&lt;/label&gt; &lt;br&gt; <br>
-
-
-
-                &nbsp;&nbsp;&lt;button class='button-submit'&gt;Checkout&lt;/button&gt; <br>
-            &lt;/form&gt;
+            &lt;form class='payment-form'&gt; <br>
+            &nbsp;&nbsp;&lt;div class='form-fields'&gt; <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset class='checkout-fieldset' name='name_info_set'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Name&lt;/legend&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='payment_name_first' class='input-label'&gt;First Name&lt;/label&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='text' id='payment_name_first' name='payment_name_first' class='input-text'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='payment_name_last' class='input-label'&gt;Last Name&lt;/label&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='text' id='payment_name_last' name='payment_name_last' class='input-text'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt; <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset class='checkout-fieldset' name='location_info_set'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Location&lt;/legend&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='payment_location_country' class='input-label'&gt;Country&lt;/label&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='text' id='payment_location_country' name='payment_location_country' class='input-text'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='payment_location_province' class='input-label'&gt;Province/Territory/State&lt;/label&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;input type='text' id='payment_location_province' name='payment_location_province' class='input-text'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='payment_location_city' class='input-label'&gt;City&lt;/label&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='text' id='payment_location_city' name='payment_location_city' class='input-text'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='payment_location_street' class='input-label'&gt;Street&lt;/label&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='text' id='payment_location_street' name='payment_location_street' class='input-text'&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt; <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset class='checkout-fieldset' name='contact_info_set'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Contact Info&lt;/legend&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='payment_contact_phn' class='input-label'&gt;Phone Number&lt;/label&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='text' id='payment_contact_phn' name='payment_contact_phn' class='input-text'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='payment_contact_email' class='input-label'&gt;Email&lt;/label&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='text' id='payment_contact_email' name='payment_contact_email' class='input-text'&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt; <br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset class='checkout-fieldset' name='payment_choice_set'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;Payment Options&lt;/legend&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_visa' value='visa'&gt; &lt;label for="payment_choice_visa"&gt;Visa&lt;/label&gt; &lt;br&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_paypal' value='paypal'&gt; &lt;label for="payment_choice_paypal"&gt;PayPal&lt;/label&gt; &lt;br&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_mastercard' value='mastercard'&gt; &lt;label for="payment_choice_mastercard"&gt;MasterCard&lt;/label&gt; &lt;br&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='radio' class='input-radio' name='payment_choice' id='payment_choice_bitcoin' value='bitcoin'&gt; &lt;label for="payment_choice_bitcoin"&gt;Bitcoin&lt;/label&gt; &lt;br&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt; <br>
+                      &nbsp;&nbsp;&lt;/div&gt; <br>
+                  <br>
+                  &nbsp;&nbsp;&lt;button class='button-submit'&gt;Checkout&lt;/button&gt; <br>
+              &lt;/form&gt;
         </code>
 
         <h4>Rendered element:</h4>
         <form class='payment-form'>
-            <label for='payment_name_first' class='input-label'>First Name</label>
-            <input type='text' id='payment_name_first' name='payment_name_first' class='input-text'>
+          <div class='form-fields'>
 
-            <label for='payment_name_last' class='input-label'>Last Name</label>
-            <input type='text' id='payment_name_last' name='payment_name_last' class='input-text'>
-
-
-
-            <label for='payment_location_country' class='input-label'>Country</label>
-            <input type='text' id='payment_location_country' name='payment_location_country' class='input-text'>
-
-            <label for='payment_location_province' class='input-label'>Province/Territory/State</label>
-            <input type='text' id='payment_location_province' name='payment_location_province' class='input-text'>
-
-            <label for='payment_location_city' class='input-label'>City</label>
-            <input type='text' id='payment_location_city' name='payment_location_city' class='input-text'>
-
-            <label for='payment_location_street' class='input-label'>Street</label>
-            <input type='text' id='payment_location_street' name='payment_location_street' class='input-text'>
-
-
-
-            <label for='payment_contact_phn' class='input-label'>Phone Number</label>
-            <input type='text' id='payment_contact_phn' name='payment_contact_phn' class='input-text'>
-
-            <label for='payment_contact_email' class='input-label'>Email</label>
-            <input type='text' id='payment_contact_email' name='payment_contact_email' class='input-text'>
-
-
-            <br>
-            <fieldset name='payment_choice_set'>
-              <legend>Payment Options</legend>
-              <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_visa' value='visa'> <label for="payment_choice_visa">Visa</label> <br>
-              <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_paypal' value='paypal'> <label for="payment_choice_paypal">PayPal</label> <br>
-              <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_mastercard' value='mastercard'> <label for="payment_choice_mastercard">MasterCard</label> <br>
-              <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_bitcoin' value='bitcoin'> <label for="payment_choice_bitcoin">Bitcoin</label> <br>
+            <fieldset class='checkout-fieldset' name='name_info_set'>
+                <legend>Name</legend>
+                <label for='payment_name_first' class='input-label'>First Name</label>
+                <input type='text' id='payment_name_first' name='payment_name_first' class='input-text'>
+                <label for='payment_name_last' class='input-label'>Last Name</label>
+                <input type='text' id='payment_name_last' name='payment_name_last' class='input-text'>
             </fieldset>
 
+            <fieldset class='checkout-fieldset' name='location_info_set'>
+                <legend>Location</legend>
+                <label for='payment_location_country' class='input-label'>Country</label>
+                <input type='text' id='payment_location_country' name='payment_location_country' class='input-text'>
+                <label for='payment_location_province' class='input-label'>Province/Territory/State</label>
+                <input type='text' id='payment_location_province' name='payment_location_province' class='input-text'>
+                <label for='payment_location_city' class='input-label'>City</label>
+                <input type='text' id='payment_location_city' name='payment_location_city' class='input-text'>
+                <label for='payment_location_street' class='input-label'>Street</label>
+                <input type='text' id='payment_location_street' name='payment_location_street' class='input-text'>
+            </fieldset>
 
-            <button class='button-submit'>Purchase</button>
+            <fieldset class='checkout-fieldset' name='contact_info_set'>
+                <legend>Contact Info</legend>
+                <label for='payment_contact_phn' class='input-label'>Phone Number</label>
+                <input type='text' id='payment_contact_phn' name='payment_contact_phn' class='input-text'>
+                <label for='payment_contact_email' class='input-label'>Email</label>
+                <input type='text' id='payment_contact_email' name='payment_contact_email' class='input-text'>
+            </fieldset>
+
+            <fieldset class='checkout-fieldset' name='payment_choice_set'>
+                <legend>Payment Options</legend>
+                <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_visa' value='visa'> <label for="payment_choice_visa">Visa</label> <br>
+                <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_paypal' value='paypal'> <label for="payment_choice_paypal">PayPal</label> <br>
+                <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_mastercard' value='mastercard'> <label for="payment_choice_mastercard">MasterCard</label> <br>
+                <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_bitcoin' value='bitcoin'> <label for="payment_choice_bitcoin">Bitcoin</label> <br>
+            </fieldset>
+            </div>
+            <button class='button-submit'>Checkout</button>
         </form>
       </section>
 
@@ -498,61 +514,125 @@
         <p>.checkout</p>
 
         <h4>Sample code:</h4>
+        <code>
+            &lt;form&gt; <br>
+            &nbsp;&nbsp;&lt;div class='cart-contents'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;table title='items in cart' class='checkout-table'&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;caption class='cart-caption'&gt; <br>Cart&lt;/caption&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope='col'&gt; <br>Product&lt;/th&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope='col'&gt; <br>Quantity&lt;/th&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope='col'&gt; <br>Price&lt;/th&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope='col'&gt; <br>Total&lt;/th&gt; <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt; <br>
+                      <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href='img/wooden_clogs.jpg' class='image-link-anchor-cart'&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src='img/wooden_clogs.jpg' alt='Hand Carved Wooden Clogs' class='image-link-image-cart'&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='checkout_quantity_1' class='product-name'&gt; Hand Carved Wooden Clogs:&lt;/label&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='text' id='checkout_quantity_1' name='checkout_quantity_1' class='input-text number product-count' value='1'&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class='number price'&gt;$60&lt;/span&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class='number price'&gt;$60&lt;/span&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt; <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt; <br>
+                      <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href='img/artisans_wax.jpg' class='image-link-anchor-cart'&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src='img/artisans_wax.jpg' alt='Artisan&#39;s Wax' class='image-link-image-cart'&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for='checkout_quantity_2' class='product-name'&gt;Artisan's Wax:&lt;/label&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type='text' id='checkout_quantity_2' name='checkout_quantity_2' class='input-text number product-count' value='2'&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class='number price'&gt;$20&lt;/span&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class='number price'&gt;$40&lt;/span&gt; <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt; <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt; <br>
+
+                      <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class='no-border'&gt;&lt;/td&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class='no-border'&gt;&lt;/td&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt; <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class='total'&gt;&lt;strong class='number price'&gt;$100&lt;/strong&gt;&lt;/td&gt; <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/table&gt; <br>
+                    &nbsp;&nbsp;&lt;/div&gt; <br>
+            &lt;/form&gt; <br>
+        </code>
 
         <h4>Rendered element:</h4>
         <form>
-        <table title='items in cart'>
-          <caption>a form used to confirm the items in your cart before checking out.</caption>
-          <tr>
-            <th scope='col'>Product</th>
-            <th scope='col'>Quantity</th>
-            <th scope='col'>Price</th>
-            <th scope='col'>Total</th>
-          </tr>
+          <div class='cart-contents'>
+            <table title='items in cart' class='checkout-table'>
+                <caption class='cart-caption'>Cart</caption>
+                <tr>
+                    <th scope='col'>Product</th>
+                    <th scope='col'>Quantity</th>
+                    <th scope='col'>Price</th>
+                    <th scope='col'>Total</th>
+                </tr>
 
-          <tr>
-            <td>
-              <a href='img/wooden_clogs.jpg' class='image-link-anchor'>
-                <img src='img/wooden_clogs.jpg' alt='Hand Carved Wooden Clogs' class='image-link-back'>
-                <div class='image-link-fore'></div>
-             </a>
-             Hand Carved Wooden Clogs
-            </td>
-            <td>
-                <label for='checkout_quantity_1'>Hand Carved Wooden Clogs</label>
-                <input type='text' id='checkout_quantity_1' name='checkout_quantity_1' class='input-text number' value='1'>
-            </td>
-            <td>
-                <span class='number'>$25</span>
-            </td>
-            <td>
-                <span class='number'>$25</span>
-            </td>
-          </tr>
+                <tr>
+                    <td>
+                    <a href='img/wooden_clogs.jpg' class='image-link-anchor-cart'>
+                        <img src='img/wooden_clogs.jpg' alt='Hand Carved Wooden Clogs' class='image-link-image-cart'>
+                    </a>
+                    </td>
+                    <td>
+                        <label for='checkout_quantity_1' class='product-name'>Hand Carved Wooden Clogs:</label>
+                        <br>
+                        <input type='text' id='checkout_quantity_1' name='checkout_quantity_1' class='input-text number product-count' value='1'>
+                    </td>
+                    <td>
+                        <span class='number price'>$60</span>
+                    </td>
+                    <td>
+                        <span class='number price'>$60</span>
+                    </td>
+                </tr>
 
-          <tr>
-            <td>
-              <a href='img/artisans_wax.jpg' class='image-link-anchor'>
-                <img src='img/artisans_wax.jpg' alt='Artisan&#39;s Wax' class='image-link-back'>
-                <div class='image-link-fore'></div>
-             </a>
-             Artisan's Wax
-            </td>
-            <td>
-                <label for='checkout_quantity_2'>Artisan's Wax: </label>
-                <input type='text' id='checkout_quantity_2' name='checkout_quantity_2' class='input-text number' value='2'>
-              </td>
-            <td>
-                <span class='number'>$10</span>
-              </td>
-            <td>
-                <span class='number'>$20</span>
-            </td>
-          </tr>
-        </table>
-        <p>Total: <strong class='number'>$35</strong></p>
-
-        <button class='button-submit'>Checkout</button>
+                <tr>
+                    <td>
+                    <a href='img/artisans_wax.jpg' class='image-link-anchor-cart'>
+                        <img src='img/artisans_wax.jpg' alt='Artisan&#39;s Wax' class='image-link-image-cart'>
+                    </a>
+                    </td>
+                    <td>
+                        <label for='checkout_quantity_2' class='product-name'>Artisan's Wax:</label>
+                        <br>
+                        <input type='text' id='checkout_quantity_2' name='checkout_quantity_2' class='input-text number product-count' value='2'>
+                    </td>
+                    <td>
+                        <span class='number price'>$20</span>
+                    </td>
+                    <td>
+                        <span class='number price'>$40</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='no-border'></td>
+                    <td class='no-border'></td>
+                    <td></td>
+                    <td class='total'><strong class='number price'>$100</strong></td>
+                </tr>
+                </table>
+        </div>
       </form>
 
       </section>
