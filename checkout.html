@@ -11,30 +11,129 @@
     <link href='css/main.css' rel='stylesheet'>
     <link href='css/nav.css' rel='stylesheet'>
     <link href='css/header.css' rel='stylesheet'>
+    <link href='css/listing.css' rel='stylesheet'>
+    <link href='css/form.css' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lobster|Montserrat|Playfair+Display' rel='stylesheet'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
 
 </head>
 
 <body class='site-body'>
-    <header class='header'>
+    <header id='header'>
         <h1 class='logo'>Luddite Shoe Co.</h1>
         <div class='spacer'></div>
+        <a id='cart-active' class='fas fa-shopping-cart' aria-label='checkout cart' href='checkout.html'><span class='cart-items'><strong class='item-count'>2</strong></span></a>
     </header>
-    <div class='body-box'>
-        <nav class='nav-main'>
-            <ul class='nav-list'>
-                <li class='nav-item'><a class='button-nav' href='#branding'>events</a></li>
-                <li class='nav-item'><a class='button-nav' href='#nav-to-self'>about</a></li>
-                <li class='nav-item'><a class='button-nav' href='#text_elements'>contact</a></li>
-                <li class='nav-item'><a class='button-nav' href='product_listings.html'>products</a></li>
-            </ul>
-        </nav>
 
-        <main class='main-content'>
+    <nav class='nav-main'>
+        <ul class='nav-list'>
+            <li class='nav-item'><a class='button-nav' href='#header'>events</a></li>
+            <li class='nav-item'><a class='button-nav' href='#header'>about</a></li>
+            <li class='nav-item'><a class='button-nav' href='#header'>contact</a></li>
+            <li class='nav-item'><a tooltip='checkout' class='button-nav' href='product_listings.html'>products</a></li>
+        </ul>
+    </nav>
 
-        </main>
-    </div>
+    <main class='content'>
+        <form class='payment-form'>
+            <div class='cart-contents'>
+                <table title='items in cart' class='checkout-table'>
+                    <caption class='cart-caption'>Cart</caption>
+                    <tr>
+                        <th scope='col'>Product</th>
+                        <th scope='col'>Quantity</th>
+                        <th scope='col'>Price</th>
+                        <th scope='col'>Total</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                        <a href='img/wooden_clogs.jpg' class='image-link-anchor-cart'>
+                            <img src='img/wooden_clogs.jpg' alt='Hand Carved Wooden Clogs' class='image-link-image-cart'>
+                        </a>
+                        </td>
+                        <td>
+                            <label for='checkout_quantity_1' class='product-name'>Hand Carved Wooden Clogs:</label>
+                            <br>
+                            <input type='text' id='checkout_quantity_1' name='checkout_quantity_1' class='input-text number product-count' value='1'>
+                        </td>
+                        <td>
+                            <span class='number price'>$60</span>
+                        </td>
+                        <td>
+                            <span class='number price'>$60</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                        <a href='img/artisans_wax.jpg' class='image-link-anchor-cart'>
+                            <img src='img/artisans_wax.jpg' alt='Artisan&#39;s Wax' class='image-link-image-cart'>
+                        </a>
+                        </td>
+                        <td>
+                            <label for='checkout_quantity_2' class='product-name'>Artisan's Wax:</label>
+                            <br>
+                            <input type='text' id='checkout_quantity_2' name='checkout_quantity_2' class='input-text number product-count' value='2'>
+                        </td>
+                        <td>
+                            <span class='number price'>$20</span>
+                        </td>
+                        <td>
+                            <span class='number price'>$40</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='no-border'></td>
+                        <td class='no-border'></td>
+                        <td></td>
+                        <td class='total'><strong class='number price'>$100</strong></td>
+                    </tr>
+                    </table>
+            </div>
+
+            <div class='form-fields'>
+
+            <fieldset class='checkout-fieldset' name='name_info_set'>
+                <legend>Name</legend>
+                <label for='payment_name_first' class='input-label'>First Name</label>
+                <input type='text' id='payment_name_first' name='payment_name_first' class='input-text'>
+                <label for='payment_name_last' class='input-label'>Last Name</label>
+                <input type='text' id='payment_name_last' name='payment_name_last' class='input-text'>
+            </fieldset>
+
+            <fieldset class='checkout-fieldset' name='location_info_set'>
+                <legend>Location</legend>
+                <label for='payment_location_country' class='input-label'>Country</label>
+                <input type='text' id='payment_location_country' name='payment_location_country' class='input-text'>
+                <label for='payment_location_province' class='input-label'>Province/Territory/State</label>
+                <input type='text' id='payment_location_province' name='payment_location_province' class='input-text'>
+                <label for='payment_location_city' class='input-label'>City</label>
+                <input type='text' id='payment_location_city' name='payment_location_city' class='input-text'>
+                <label for='payment_location_street' class='input-label'>Street</label>
+                <input type='text' id='payment_location_street' name='payment_location_street' class='input-text'>
+            </fieldset>
+
+            <fieldset class='checkout-fieldset' name='contact_info_set'>
+                <legend>Contact Info</legend>
+                <label for='payment_contact_phn' class='input-label'>Phone Number</label>
+                <input type='text' id='payment_contact_phn' name='payment_contact_phn' class='input-text'>
+                <label for='payment_contact_email' class='input-label'>Email</label>
+                <input type='text' id='payment_contact_email' name='payment_contact_email' class='input-text'>
+            </fieldset>
+
+            <fieldset class='checkout-fieldset' name='payment_choice_set'>
+                <legend>Payment Options</legend>
+                <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_visa' value='visa'> <label for="payment_choice_visa">Visa</label> <br>
+                <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_paypal' value='paypal'> <label for="payment_choice_paypal">PayPal</label> <br>
+                <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_mastercard' value='mastercard'> <label for="payment_choice_mastercard">MasterCard</label> <br>
+                <input type='radio' class='input-radio' name='payment_choice' id='payment_choice_bitcoin' value='bitcoin'> <label for="payment_choice_bitcoin">Bitcoin</label> <br>
+            </fieldset>
+            </div>
+            <button class='button-submit'>Checkout</button>
+        </form>
+    </main>
 
 </body>
 

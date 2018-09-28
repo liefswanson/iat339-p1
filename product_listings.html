@@ -12,6 +12,7 @@
     <link href='css/nav.css' rel='stylesheet'>
     <link href='css/header.css' rel='stylesheet'>
     <link href='css/listing.css' rel='stylesheet'>
+    <link href='css/form.css' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lobster|Montserrat|Playfair+Display' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
         crossorigin="anonymous">
@@ -22,7 +23,7 @@
     <header id='header'>
         <h1 class='logo'>Luddite Shoe Co.</h1>
         <div class='spacer'></div>
-        <a id='cart' class='fas fa-shopping-cart' href='checkout.html'></a>
+        <a id='cart' class='fas fa-shopping-cart' aria-label='checkout cart' href='checkout.html'><span class='cart-items'><strong class='item-count'>2</strong></span></a>
     </header>
 
     <nav class='nav-main'>
@@ -40,24 +41,24 @@
                 <div class='listing-main'>
                     <a class='image-link-anchor' href='#header'>
                         <div class='image-link-back'>
-                                <img class='image-link-image' src="img/wooden_clogs.jpg" alt="Hand Carved Wooden Clogs">
+                            <img class='image-link-image' src="img/wooden_clogs.jpg" alt="Hand Carved Wooden Clogs">
                         </div>
                     </a>
                     <a class='listing-title' href='#header'>Hand Carved Wooden Clogs</a>
-                    <a class='listing-price'>$60</a>
+                    <p class='listing-price'>$60</p>
                 </div>
             </li>
             <li class='product'>
-                    <div class='listing-main'>
-                        <a class='image-link-anchor' href='#header'>
-                            <div class='image-link-back'>
-                                    <img class='image-link-image' src='img/artisans_wax.jpg' alt="Artisan's Shoe Wax">
-                            </div>
-                        </a>
-                        <a class='listing-title' href='#header'>Artisan's Shoe Wax</a>
-                        <a class='listing-price'>$20</a>
-                    </div>
-                </li>
+                <div class='listing-main'>
+                    <a class='image-link-anchor' href='#header'>
+                        <div class='image-link-back'>
+                            <img class='image-link-image' src='img/artisans_wax.jpg' alt="Artisan's Shoe Wax">
+                        </div>
+                    </a>
+                    <a class='listing-title' href='#header'>Artisan's Shoe Wax</a>
+                    <p class='listing-price'>$20</p>
+                </div>
+            </li>
         </ul>
     </main>
 

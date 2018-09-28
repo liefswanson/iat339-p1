@@ -1,7 +1,13 @@
+@media (min-width: 25rem) {
+    .products {
+        margin: 1rem;
+    }
+}
+
 .products {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    margin: 1rem;
     padding: 0;
 }
 
@@ -29,6 +35,7 @@
 }
 
 .listing-price {
+    margin-top: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -52,6 +59,7 @@
     */
 }
 
+
 .image-link-anchor {
     display: inline-block;
     box-sizing: content-box;
@@ -64,6 +72,7 @@
 .image-link-back {
     line-height: 0;
     background: #37363a;
+    text-align: center;
 }
 
 .image-link-image:hover,

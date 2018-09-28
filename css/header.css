@@ -7,10 +7,21 @@
 
 .logo {
     padding-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .spacer {
     flex: 1;
+}
+
+.cart-items {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.item-count {
+    font-size: 1.25rem;
 }
 
 #cart {
@@ -18,11 +29,29 @@
     font-size: 2rem;
     color: #524F5C;
     text-decoration: none;
+    line-height: 2.5rem;
     border: none;
-    line-height: 1.5;
 
     transition-duration: 0.5s;
     transition-property: color;
+}
+
+#cart-active {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #E7AF13;
+    text-decoration: none;
+    line-height: 2.5rem;
+    border: none;
+
+    transition-duration: 0.5s;
+    transition-property: color;
+}
+
+
+#cart-active:hover,
+#cart-active:focus {
+    color: black;
 }
 
 #cart:hover,
